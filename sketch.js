@@ -22,9 +22,9 @@ function setup() {
 	rectMode(CENTER);
 	
 
-	a1 = new Zone(width/2,height-50,200,20);
-	a2 = new Zone(300,height-90,20,100);
-	a3 = new Zone(500,height-90,20,100);
+	a1 = new Zone(width/2,height-45,200,10);
+	a2 = new Zone(300,height-90,10,100);
+	a3 = new Zone(500,height-90,10,100);
     
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
@@ -39,13 +39,13 @@ function setup() {
 
 
 	
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.6, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 23, {restitution:0.6, isStatic:true});
 	World.add(world, packageBody);
 	
 
 	//Create a Ground
-	ground = Bodies.rectangle(width/2, 550, width, 20 , {isStatic:true} );
- 	World.add(world, ground);
+	//ground = Bodies.rectangle(width/2, 550, width, 20 , {isStatic:true} );
+ 	//World.add(world, ground);
 
 
 	Engine.run(engine);
